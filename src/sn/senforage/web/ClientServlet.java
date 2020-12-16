@@ -86,6 +86,7 @@ public class ClientServlet extends HttpServlet {
 			Village village = new Village();
 			village = villageRepository.get(Integer.parseInt(request.getParameter("village_id")));
 			client.setVillage(village);
+			
 			int ok = clientRepository.add(client);
 			if(ok ==1) {
 				request.setAttribute("resultat", "Ajout");

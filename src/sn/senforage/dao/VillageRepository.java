@@ -60,7 +60,7 @@ public class VillageRepository implements JpaRepository<Village>{
 	@Override
 	public List<Village> findAll() {
 		Query query = em.createQuery("select v from Village v");
-		return query.getResultList();
+		return  query.getResultList();
 	}
 	
 
